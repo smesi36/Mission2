@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* Custom fonts for the page main heading */
+  @font-face {
+
+    font-family: 'cactusFont'; /* Choose a name for your font */
+
+    src: url('fonts/CactusSandwichFillFm-E42l.ttf')
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* position: relative; */
+    width: 100vw;
+    height: 100vh;
+    background: url('images/rainier-ridao-YUIGZ33SB_0-unsplash.jpg') center/cover no-repeat;
+}
+/* pseudo element Applies adjustable transparency */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(212, 212, 198, 0.4); /* Adjust transparency */
+    z-index: -1; /* sits behind other elements */
+}
+
+.styled-header {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    justify-content:left; 
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.styled-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%; 
+    background: rgba(37, 163, 21, 0.7) no-repeat center/cover;
+    z-index: -1;
+}
+
+.styled-mainTitle {
+    font-family: 'cactusFont';
+    font-size: 400%;
+    color: #096307;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    width: 40vw;
+    padding: 0;
+    background: rgba(163, 266, 104, 0.7);
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    position: relative;
+    /* align-content: center; */
+}
+
+/* ------------------- NAVIGATION BAR ------------------- */
+#nav-div > nav {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    margin: 0rem 0rem;
+}
+
+#nav-div ul {
+    display: flex;
+  width: 50%;
+  /* gap: 5%; */
+  justify-content: space-evenly;
+  padding: 1% 1%;
+  /* border: solid 5px #be0707; */
+  background: rgba(163, 266, 104, 0.5);
+  border-radius: 30px 30px 30px 30px;
+}
+
+/* ---------------- CAROUSEL AND GALLERY ---------------- */
+/* .gallery-container {
+    text-align: center;
+} */
+
+.selected-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0rem;
+}
+
+.arrow {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 20rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 150%;
+    margin: 0rem 2rem;
+}
+
+.arrow:hover {
+    background-color: #555;
+}
+
+#selected-image {
+    width: auto;
+    /* max-width: 30rem;  */
+    height: auto;
+    max-height: 25rem;
+    margin: 0 2rem;
+    border: 2px solid #ccc;
+    border-radius: 2rem;
+    align-items: center;
+}
+
+#image-name {
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;    
+}
+
+.thumbnail {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.thumbnail:hover {
+    border-color: #d6f5ad;
+}
+
+/* -------------------- MODAL STYLING ------------------- */
+#modal {
+    width: 50vw;  /* Limits width to 80% of the viewport */
+    max-width: 50rem; /* Ensures it doesn't get too large */
+    /* height: auto; */
+    padding: 1rem; /* Adds some spacing */
+    border: none; /* Removes default border */
+    background: rgba(255, 255, 255, 0.9); /* Light background */
+    text-align: center;
+    border-radius: 2rem;   
+  }
+  
+  #modal-image {
+    width: 100%;
+    border-radius: 2rem;
+    
+
+    /* Ensures the image fits within the modal */
+    /* height: auto; */
+    /* max-height: 80vh; Prevents it from overflowing the screen */
+  }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prickly Beauties</title>
+    <link rel="stylesheet" href="cacti.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header id="header">
+      <div id="mainTitle-div"><h1 id="page-Heading">PRICKLY BEAUTIES</h1></div>
+    </header>
+    <main>
+      <div id="nav-div">
+        <nav>
+          <ul>
+            <li class="btn nav-link">HOME</li>
+            <li class="btn nav-link">CATALOGUE</li>
+            <li class="btn nav-link">ABOUT</li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- ------------------- MODAL DIALOG ------------------- -->
+       <dialog id="modal"><img id='modal-image' src='images/gallery/parodia-werneri-1.jpg'></dialog>
+       
+      <!-- ------------------ GALLERY & CAROUSEL ----------------- -->
+      <div class="gallery-container">
+        <div class="selected-image-container">
+          <button class="arrow" id="left-arrow">&#8678;</button>
+          <img
+            id="selected-image"
+            src="images/gallery/parodia-werneri-1.jpg"
+            alt="Selected Cactus"
+          />
+          <button class="arrow" id="right-arrow">&#8680;</button>
+        </div>
+        <p id="image-name">Parodia Werneri</p>
+        <div class="thumbnail-container">
+          <img class='thumbnail' src="images/gallery/parodia-werneri-1.jpg" alt="P.Werneri">
+          <img class='thumbnail' src="images/gallery/rebutia-heliosa.jpg" alt="R.Heliosa">
+          <img class='thumbnail' src="images/gallery/aprocactus-flagelli.jpg" alt="A.Flagelliformis">
+          <img class='thumbnail' src="images/gallery/gymnocalycium-friedrichii.jpg" alt="G.Friedrichii">
+          <img class='thumbnail' src="images/gallery/rebutia-krainziana.jpg" alt="R.Krainziana">
+          <img class='thumbnail' src="images/gallery/astrophytum-asterias.jpg" alt="A.Asterias">
+          <img class='thumbnail' src="images/gallery/astrophytum-capricorne.jpg" alt="A.Capricorne">
+          <img class='thumbnail' src="images/gallery/rebutia-orange-snow.jpg" alt="R.Orange Snow">
+          <img class='thumbnail' src="images/gallery/rebutia-senilis.jpg" alt="R.Senilis">
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
