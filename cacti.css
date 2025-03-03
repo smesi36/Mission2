@@ -116,12 +116,14 @@ body::before {
 }
 
 #selected-image {
-    width: auto;
-    /* max-width: 30rem;  */
-    height: auto;
-    max-height: 25rem;
+    /* these settings maintain
+    stable position for the selected-image 
+    and the arrows */
+    width: 50vw;
+    height: 50vh;
+    object-fit: cover;
     margin: 0 2rem;
-    border: 2px solid #ccc;
+    border: 2px solid #659229;
     border-radius: 2rem;
     align-items: center;
 }
@@ -154,19 +156,37 @@ body::before {
 
 /* -------------------- MODAL STYLING ------------------- */
 #modal {
-    width: 50vw;  /* Limits width to 80% of the viewport */
-    max-width: 50rem; /* Ensures it doesn't get too large */
-    /* height: auto; */
+    width: 75vw;  
+    /* max-width: 50rem;  */
+    height: 75vh;
     padding: 1rem; /* Adds some spacing */
     border: none; /* Removes default border */
-    background: rgba(255, 255, 255, 0.9); /* Light background */
-    text-align: center;
-    border-radius: 2rem;   
+    
+    /* background: rgba(255, 255, 255, 0.9);  */
+    
+    /* text-align: center; */
+    border-radius: 2rem;
+    /* aligns modal to the centre */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);   
   }
   
   #modal-image {
-    width: 100%;
+    width: 72vh;
+    height: 70vh;
+    max-height: 70vh;
+    border: 5px solid white;
     border-radius: 2rem;
+    /* fits image without distorting: */
+    object-fit: cover;
+    /* aligns modal-image to the centre */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
     
 
     /* Ensures the image fits within the modal */
