@@ -23,7 +23,7 @@ const imagesArray = [
 // ------ ENABLES SELECTING IMAGES BY CURRENT INDEX ----- //
 let currentIndex = 0;
 
-// getElementById for selected imgage, image-name, and arrow buttons
+// getElementById for selected image, image-name, and arrow buttons
 const selectedImage = document.getElementById('selected-image');
 const imageName = document.getElementById('image-name');
 const leftArrow = document.getElementById('left-arrow');
@@ -36,6 +36,7 @@ const thumbnails = document.querySelectorAll('.thumbnail');
 const modal = document.getElementById('modal');
 const modalImage = document.getElementById('modal-image');
 
+// --------------------- FUNCTION 1 --------------------- //
 // updates the displayed image and its name
 function updateGallery() {
   console.log(currentIndex, 'updating gallery');
@@ -43,6 +44,7 @@ function updateGallery() {
   imageName.innerHTML=imagesArray[currentIndex].name;
 } 
 
+// --------------------- FUNCTION 2 --------------------- //
 // move the currentIndex up to the next
 // if the currentIndex reaches the end of array, reset it to 0
 // call updateGallery function.    
@@ -53,6 +55,7 @@ function nextImage() {
     updateGallery();
 }
 
+// --------------------- FUNCTION 3 --------------------- //
 // move the current index down to the previous
 // if the currentIndex reaches 0, change it to the last index
 // call updateGallery    
@@ -66,6 +69,7 @@ function prevImage() {
     updateGallery();
 }
 
+// --------------------- FUNCTION 4 --------------------- //
 // change currentIndex to selected thumbnail index
 // call updateGallery
 
@@ -75,7 +79,8 @@ function selectThumbnail(index) {
     updateGallery();
 } 
 
-//add functions to elements by adding event listeners:
+// ------------------- EVENT LISTENERS ------------------ //
+//add functions to the arrow buttons by adding event listeners:
 leftArrow.addEventListener('click', prevImage);
 rightArrow.addEventListener('click', nextImage);
 
@@ -89,6 +94,7 @@ thumbnails.forEach((thumbnail, index) => {
     thumbnail.addEventListener('click', () => selectThumbnail(index));
 })
 
+// ----- MODAL-RELATED FUNCTIONS AND EVENT LISTENERS ---- //
 //adds modal functionality to the selectedImage:
 
 selectedImage.addEventListener('click', openModal);
